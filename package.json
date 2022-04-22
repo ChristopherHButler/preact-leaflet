@@ -1,21 +1,40 @@
 {
   "name": "preact-leaflet",
-  "version": "0.1.1",
+  "description": "A preact wrapper for the leaflet JavaScript library",
+  "author": "Christopher Butler",
+  "version": "0.1.2",
   "source": "src/index.js",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
-  "author": "Christopher Butler",
   "license": "SEE LICENSE IN LICENSE.txt",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChristopherHButler/preact-leaflet"
+  },
+  "bugs": {
+    "url": "https://github.com/ChristopherHButler/preact-leaflet/issues"
+  },
+  "homepage": "https://github.com/ChristopherHButler/preact-leaflet",
+  "keywords": [
+    "leaflet",
+    "preact",
+    "maps"
+  ],
+  "files": [
+    "dist/"
+  ],
   "scripts": {
     "demo:start": "parcel demo/index.html --dist-dir dist-demo",
-    "demo:build": "parcel build demo/index.html --dist-dir dist-demo",
     "watch": "parcel watch",
+    "prepublish": "rm -rf dist && npm run build",
     "build": "parcel build",
+    "postbuild": "npm pack && tar -xvzf *.tgz && rm -rf package *.tgz",
     "lint": "eslint src demo",
     "release": "standard-version",
     "test": "karma start",
     "test:ci": "NODE_ENV=test karma start"
   },
+
   "dependencies": {
     "leaflet": "1.7.1",
     "leaflet.markercluster": "^1.4.1",
