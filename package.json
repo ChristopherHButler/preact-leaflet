@@ -20,9 +20,6 @@
     "preact",
     "maps"
   ],
-  "files": [
-    "dist/"
-  ],
   "scripts": {
     "demo:start": "parcel demo/index.html --dist-dir dist-demo",
     "watch": "parcel watch",
