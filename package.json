@@ -26,7 +26,7 @@
   "scripts": {
     "demo:start": "parcel demo/index.html --dist-dir dist-demo",
     "watch": "parcel watch",
-    "prepublish": "rm -rf dist && npm run build",
+    "prepare": "rm -rf dist && npm run build",
     "build": "parcel build",
     "postbuild": "npm pack && tar -xvzf *.tgz && rm -rf package *.tgz",
     "lint": "eslint src demo",
