@@ -1,0 +1,19 @@
+preact-leaflet v0.1.0
+
+Preact Leaflet Web SDK
+
+Copyright (c) 2022, Christopher Butler
+
+All rights reserved.
+
+preact-leaflet version 0.1.0 or higher (“Preact Leaflet Web SDK”) must be used according to
+the [INSERT COMPANY NAME] Terms of Service. This license allows developers with a current active
+[INSERT COMPANY NAME] account to use and modify the Preact Leaflet Web SDK. Developers may modify the
+Preact Leaflet Web SDK code so long as the modifications do not change or interfere with
+marked portions of the code related to billing, accounting, and anonymized data
+collection. The Preact Leaflet Web SDK only sends anonymized usage data, which [INSERT COMPANY NAME] uses
+for fixing bugs and errors, accounting, and generating aggregated anonymized
+statistics. This license terminates automatically if a user no longer has an
+active [INSERT COMPANY NAME] account.
+
+For the full license terms, please see the Mapbox Terms of Service at [HOLD - url]

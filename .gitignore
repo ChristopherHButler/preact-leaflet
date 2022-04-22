@@ -1,0 +1,11 @@
+.cache
+.parcel-cache
+coverage
+dist
+dist-demo
+node_modules
+
+*.swp
+.DS_Store
+package-lock.json
+yarn-error.log
