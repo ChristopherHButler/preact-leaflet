@@ -4,8 +4,8 @@
   "author": "Christopher Butler",
   "version": "0.1.4",
   "source": "src/index.js",
-  "main": "index.cjs",
-  "module": "index.mjs",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
   "license": "SEE LICENSE IN LICENSE.txt",
   "repository": {
     "type": "git",
@@ -20,15 +20,12 @@
     "preact",
     "maps"
   ],
-  "files": [
-    "dist/"
-  ],
   "scripts": {
     "demo:start": "parcel demo/index.html --dist-dir dist-demo",
     "watch": "parcel watch",
     "build": "parcel build",
     "copypackage": "cp -rf package.json dist",
-    "dist": "npm run build && npm run copypackage && cd dist && npm publish",
+    "publish": "npm run build && npm run copypackage && cd dist && npm publish",
     "lint": "eslint src demo",
     "release": "standard-version",
     "test": "karma start",
