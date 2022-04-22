@@ -2,7 +2,7 @@
   "name": "preact-leaflet",
   "description": "A preact wrapper for the leaflet JavaScript library",
   "author": "Christopher Butler",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "source": "src/index.js",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
