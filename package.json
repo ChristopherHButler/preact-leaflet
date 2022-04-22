@@ -2,7 +2,7 @@
   "name": "preact-leaflet",
   "description": "A preact wrapper for the leaflet JavaScript library",
   "author": "Christopher Butler",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "source": "src/index.js",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
@@ -20,12 +20,13 @@
     "preact",
     "maps"
   ],
+  "files": [
+    "dist/"
+  ],
   "scripts": {
     "demo:start": "parcel demo/index.html --dist-dir dist-demo",
     "watch": "parcel watch",
     "build": "parcel build",
-    "copypackage": "cp -rf package.json dist",
-    "publish": "npm run build && npm run copypackage && cd dist && npm publish",
     "lint": "eslint src demo",
     "release": "standard-version",
     "test": "karma start",
