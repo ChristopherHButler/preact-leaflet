@@ -2,8 +2,8 @@ import { h } from 'preact';
 import { expect } from 'chai';
 import sinon from 'sinon';
 import leaflet from 'leaflet';
-import { mount } from '../test/enzyme';
-import TileLayer from './TileLayer';
+import { mount } from '../../test/enzyme';
+import TileLayer from '../TileLayer';
 
 describe('TileLayer', () => {
   const sandbox = sinon.createSandbox();

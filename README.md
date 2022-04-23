@@ -1,5 +1,7 @@
 # preact-leaflet [![codecov](https://codecov.io/gh/kontrollanten/preact-leaflet/branch/master/graph/badge.svg)](https://codecov.io/gh/kontrollanten/preact-leaflet) [![CircleCI](https://circleci.com/gh/kontrollanten/preact-leaflet.svg?style=svg)](https://circleci.com/gh/kontrollanten/preact-leaflet)
 
+🚧 This library is current under construction. 🚧
+
 Supporting following Leaflet components:
 * [Map](https://leafletjs.com/reference-1.4.0.html#map-example)
 * [Marker](https://leafletjs.com/reference-1.4.0.html#marker)
@@ -28,3 +30,25 @@ All props, except for `on` prefixed, are passed to Leaflet.
 
 ### Event listeners
 Props prefixed with `on` are handled as event listeners, e.g. `onZoom` will listen for the `zoom` event.
+
+
+## Contributing
+Yes. Do it. All about that.
+
+#### How to contribute
+1. Fork the project
+2. Create a feature branch (`git checkout -b f/amazingFeature`)
+3. Commit your changes (`git commit -m 'added awesome sauce'`)
+4. Push to the remote branch (`git push origin f/amazingFeature`)
+5. Open a pull request.
+
+#### Contributors: 1
+
+- :monkey_face: Christopher Harold Butler ([ChristopherHButler](https://github.com/ChristopherHButler))
+
+## Acknowledgments
+
+This library is based off the now archived [kontrollanten/preact-leaflet](https://github.com/kontrollanten/preact-leaflet)
+
+It also borrows some typing from [Benjythebee/preact-leaflet-typescript](https://github.com/Benjythebee/preact-leaflet-typescript) however this repo also seems to be stagnant.
+

@@ -1,8 +1,8 @@
 import { h } from 'preact';
 import { expect } from 'chai';
 import { Map } from 'leaflet';
-import { mount } from '../test/enzyme';
-import ZoomControl from './ZoomControl';
+import { mount } from '../../test/enzyme';
+import ZoomControl from '../ZoomControl';
 
 describe('ZoomControl', () => {
   let leafletMap;

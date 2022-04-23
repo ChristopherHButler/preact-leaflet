@@ -2,9 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
-### 0.1.0 (2022-04-22)
+### 0.1.0 (2019-12-10)
 
-
+Note: Changes made to verion 0.1.0 and prior were from a different author: [kontrollanten/preact-leaflet](https://github.com/kontrollanten/preact-leaflet). This repo has been forked and modified.
 ### Features
 
 * **Map:** add support for all leaflet Map options 

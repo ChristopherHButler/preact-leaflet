@@ -2,8 +2,8 @@ import { h } from 'preact';
 import { expect } from 'chai';
 import sinon from 'sinon';
 import { Map } from 'leaflet';
-import { mount } from '../test/enzyme';
-import Polyline from './Polyline';
+import { mount } from '../../test/enzyme';
+import Polyline from '../Polyline';
 
 describe('Polyline', () => {
   const sandbox = sinon.createSandbox();

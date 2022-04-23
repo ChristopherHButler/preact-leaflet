@@ -2,8 +2,8 @@ import { h } from 'preact';
 import { expect } from 'chai';
 import sinon from 'sinon';
 import { Map } from 'leaflet';
-import { mount } from '../test/enzyme';
-import { Marker, MarkerCluster } from '.';
+import { mount } from '../../test/enzyme';
+import { Marker, MarkerCluster } from '..';
 
 describe('MarkerCluster', () => {
   let leafletMap;
