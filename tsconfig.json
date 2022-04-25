@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+      "target": "es5",
+      "lib": [
+        "dom",
+        "dom.iterable",
+        "es2017",
+        "esnext"
+      ],
+      "allowJs": true, // Allow JavaScript files to be compiled
+      "skipLibCheck": true, // Skip type checking of all declaration files
+      "esModuleInterop": true,  // Disables namespace imports (import * as fs from "fs") and enables CJS/AMD/UMD style imports (import fs from "fs")
+      "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export
+      "strict": true, // Enable all strict type checking options
+      "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file.
+      "noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch statement
+      "module": "esnext", // Specify module code generation
+      "moduleResolution": "node", // Resolve modules using Node.js style
+      "resolveJsonModule": true, // Include modules imported with .json extension
+      "isolatedModules": true, // Warn you if you write certain code that can’t be correctly interpreted by a single-file transpilation process.
+      // "noEmit": false, // Do not emit compiler output files like JavaScript source code, source-maps or declarations. This allows another tool (Babel) to handle converting the TypeScript file to a file which can run inside a JavaScript environment.
+      "jsx": "preserve", // Support JSX in .tsx files
+      "jsxFactory": "h", // Changes the function called in .js files when compiling JSX Elements using the classic JSX runtime.
+      "jsxFragmentFactory": "Fragment",
+      "declaration": true, // This tells TypeScript to emit an .d.ts definitions file along with your compiled JavaScript, which is what TypeScript will use for type checking.
+      "outDir": "./dist", // The javascript will be compiled to the dist folder.
+      // "experimentalDecorators": true,
+      "jsxImportSource": "preact",
+      "strictPropertyInitialization": false
+
+  },
+  "include": [
+      "src"
+  ],
+  "exclude": [
+    ".parcel-cache",
+    "demo",
+    "dist",
+    "node_modules",
+  ]
+}

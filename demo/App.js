@@ -1,11 +1,12 @@
 import { h, Component, Fragment } from 'preact';
 import 'preact/debug';
-import { divIcon } from 'leaflet';
+import { SvgIcon } from './SvgIcon';
 import {
-  Map, Marker, MarkerCluster, Polyline, TileLayer,
-} from '../src';
+  MapContainer,
+  TileLayer,
+  Marker,
+} from '../dist';
 import 'leaflet/dist/leaflet.css';
-import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
 import './styles.css';
 import route from './long-route';
 
@@ -63,44 +64,39 @@ export default class App extends Component {
     });
   }
 
-  render(props, {
-    mapCenter, markerCluster, markers, polylines, zoom,
-  }) {
+  render() {
     return (
       <Fragment>
         <header>
           <h1>preact-leaflet</h1>
-          <ul className="menu">
-            {[
-              { link: '#simple', title: 'Simple' },
-              { link: '#cluster', title: 'Cluster' },
-              { link: '#polyline', title: 'Polyline and markers' },
-            ].map(({ link, title }) => (
-              <li className={window.location.hash === link ? 'active' : ''}>
-                <a href={link}>{title}</a>
-              </li>
-            ))}
-          </ul>
+          <p>Better demo coming soon</p>
         </header>
-        <Map center={mapCenter} style={{ height: '100%' }} zoom={zoom}>
+        <MapContainer
+          // ref={this.mapRef}
+          center={[51.505, -0.09]}
+          zoom={13}
+        >
           <TileLayer
+            // to use mapbox
+            // url="https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}"
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            // crossOrigin="null"
+            options={{
+              // to use mapbox
+              // attribution: "Map data &copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors, Imagery © <a href='https://www.mapbox.com/'>Mapbox</a>",
+              attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+              maxZoom: 18,
+              id: 'mapbox/streets-v11',
+              tileSize: 512,
+              zoomOffset: -1,
+              // required for mapbox
+              accessToken: '',
+            }}
           />
-          {markers.map(position => (
-            <Marker icon={divIcon()} position={position} />
-          ))}
-          {polylines.map(positions => (
-            <Polyline positions={positions} />
-          ))}
-          {markerCluster && (
-            <MarkerCluster key="cluster">
-              {markerCluster.map(position => (
-                <Marker key={position.join(',')} icon={divIcon()} position={position} />
-              ))}
-            </MarkerCluster>
-          )}
-        </Map>
+          <Marker
+            position={[51.5, -0.09]}
+            icon={SvgIcon}
+          />
+        </MapContainer>
       </Fragment>
     );
   }

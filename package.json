@@ -2,11 +2,14 @@
   "name": "preact-leaflet",
   "description": "A preact wrapper for the leaflet JavaScript library",
   "author": "Christopher Butler",
-  "version": "0.1.6",
-  "source": "src/index.js",
-  "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
+  "version": "0.1.8",
+  "source": "src/index.tsx",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "license": "SEE LICENSE IN LICENSE.txt",
+  "files": [
+    "dist/**/*"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/ChristopherHButler/preact-leaflet"
@@ -23,50 +26,42 @@
   "scripts": {
     "demo:start": "parcel demo/index.html --dist-dir dist-demo",
     "watch": "parcel watch",
-    "build": "parcel build",
+    "build": "parcel build --no-source-maps",
     "lint": "eslint src demo",
     "release": "standard-version",
     "test": "karma start",
     "test:ci": "NODE_ENV=test karma start"
   },
-
   "dependencies": {
-    "leaflet": "1.7.1",
-    "leaflet.markercluster": "^1.4.1",
-    "preact": "10.5.12"
+    "@types/leaflet": "^1.7.9",
+    "leaflet": "^1.8.0",
+    "preact": "^10.3.2"
   },
   "devDependencies": {
     "@babel/core": "7.12.16",
     "@babel/plugin-transform-react-jsx": "7.12.16",
     "@babel/preset-env": "7.12.16",
     "@babel/preset-react": "7.12.13",
+    "@babel/preset-typescript": "^7.16.7",
+    "@parcel/packager-ts": "^2.0.0-rc.0",
     "@parcel/transformer-image": "^2.0.0-rc.0",
+    "@parcel/transformer-typescript-types": "^2.0.0-rc.0",
     "babel-plugin-istanbul": "6.0.0",
     "babelify": "10.0.0",
     "browserify": "17.0.0",
-    "chai": "4.3.0",
-    "codecov": "3.8.1",
-    "enzyme": "3.11.0",
-    "enzyme-adapter-preact-pure": "3.0.0",
     "eslint": "7.20.0",
     "eslint-config-airbnb": "18.2.1",
     "eslint-plugin-import": "2.22.1",
-    "eslint-plugin-jasmine": "4.1.2",
     "eslint-plugin-jsx-a11y": "6.4.1",
     "eslint-plugin-react": "7.22.0",
-    "jasmine": "3.6.4",
-    "karma": "6.1.1",
-    "karma-babel-preprocessor": "8.0.1",
-    "karma-browserify": "8.0.0",
-    "karma-chrome-launcher": "3.1.0",
-    "karma-coverage": "2.0.3",
-    "karma-coverage-istanbul-reporter": "3.0.3",
-    "karma-jasmine": "4.0.1",
-    "karma-mocha-reporter": "2.2.5",
     "parcel": "^2.0.0-rc.0",
-    "sinon": "9.2.4",
-    "sinon-chai": "3.5.0",
     "standard-version": "9.1.0",
+    "typescript": "^4.6.3",
     "watchify": "3.11.1"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ]
 }
