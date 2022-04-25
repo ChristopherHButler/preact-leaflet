@@ -1,6 +1,4 @@
-# preact-leaflet [![codecov](https://codecov.io/gh/kontrollanten/preact-leaflet/branch/master/graph/badge.svg)](https://codecov.io/gh/kontrollanten/preact-leaflet) [![CircleCI](https://circleci.com/gh/kontrollanten/preact-leaflet.svg?style=svg)](https://circleci.com/gh/kontrollanten/preact-leaflet)
-
-NOTE: THIS IS THE SECOND ATTEMPT TO RE-WRITE THIS LIBRARY
+# preact-leaflet
 
 🚧 This library is current under construction. 🚧
 
@@ -20,14 +18,19 @@ import { MapContainer, TileLayer, Marker } from 'preact-leaflet';
   zoom={13}
 >
   <TileLayer
-    url="https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}"
+    // to use mapbox
+    // url="https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}"
+    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     options={{
-      attribution: "Map data &copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors, Imagery © <a href='https://www.mapbox.com/'>Mapbox</a>",
+      // to use mapbox
+      // attribution: "Map data &copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors, Imagery © <a href='https://www.mapbox.com/'>Mapbox</a>",
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       maxZoom: 18,
       id: 'mapbox/streets-v11',
       tileSize: 512,
       zoomOffset: -1,
-      accessToken: '' // Required to use mapbox but not open street maps.
+      // required for mapbox
+      accessToken: '',
     }}
   />
   <Marker
