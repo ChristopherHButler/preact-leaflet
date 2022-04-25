@@ -1,6 +1,8 @@
-const onPropRegex = /on[A-Z](.*)/;
+import { ComponentProps, Filter } from '../types';
 
-const getProvidedEventListeners = props => Object.keys(props)
+export const onPropRegex = /on[A-Z](.*)/;
+
+const getProvidedEventListeners = (props: ComponentProps) => Object.keys(props)
   .filter(prop => prop.match(onPropRegex))
   .map(prop => ({
     callback: props[prop],
@@ -8,7 +10,7 @@ const getProvidedEventListeners = props => Object.keys(props)
     prop,
   }));
 
-const manageListeners = (inst, props, { filter, type }) => {
+const manageListeners = (inst: any, props: ComponentProps, { filter, type }: { filter: any, type: string }) => {
   let listeners = getProvidedEventListeners(props);
 
   if (filter) {
@@ -21,16 +23,10 @@ const manageListeners = (inst, props, { filter, type }) => {
     });
 };
 
-const addListenersFromProps = (inst, props, { filter } = {}) => {
+export const addListenersFromProps = (inst: any, props: ComponentProps, { filter }: { filter: Filter } = { filter: '' }): void => {
   manageListeners(inst, props, { filter, type: 'on' });
 };
 
-const removeListenersFromProps = (inst, props, { filter } = {}) => {
+export const removeListenersFromProps = (inst: any, props: ComponentProps, { filter }: { filter: Filter } = { filter: '' }): void => {
   manageListeners(inst, props, { filter, type: 'off' });
-};
-
-export {
-  addListenersFromProps,
-  onPropRegex,
-  removeListenersFromProps,
 };

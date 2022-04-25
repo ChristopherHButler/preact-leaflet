@@ -2,8 +2,8 @@ import { h, Component, Fragment } from 'preact';
 import 'preact/debug';
 import { divIcon } from 'leaflet';
 import {
-  Map, Marker, MarkerCluster, Polyline, TileLayer,
-} from '../src';
+  Map, TileLayer, // Marker, MarkerCluster, Polyline, 
+} from '../dist';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
 import './styles.css';
@@ -84,10 +84,11 @@ export default class App extends Component {
         </header>
         <Map center={mapCenter} style={{ height: '100%' }} zoom={zoom}>
           <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            // crossOrigin="null"
+            crossOrigin="null"
           />
-          {markers.map(position => (
+          {/* {markers.map(position => (
             <Marker icon={divIcon()} position={position} />
           ))}
           {polylines.map(positions => (
@@ -99,7 +100,7 @@ export default class App extends Component {
                 <Marker key={position.join(',')} icon={divIcon()} position={position} />
               ))}
             </MarkerCluster>
-          )}
+          )} */}
         </Map>
       </Fragment>
     );

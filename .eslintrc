@@ -43,5 +43,6 @@
         "no-unused-expressions": 0
       }
     }
-  ]
+  ],
+  "ignorePatterns": ["/dist"]
 }

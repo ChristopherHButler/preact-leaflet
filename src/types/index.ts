@@ -1,3 +1,4 @@
+import { ComponentChildren } from 'preact';
 import {
   LatLngBoundsExpression,
   FeatureGroup,
@@ -13,21 +14,29 @@ import {
   ControlPosition,
 } from 'leaflet';
 
+export type PropKey = string;
+
+export type ComponentProps = Record<PropKey, any>;
+
+export type Filter = string | (({ prop }: { prop: PropKey }) => any);
+
+
+
 // Map.tsx types:
 
-export interface ExtendedMapOptionsProps extends MapOptions {
+export interface ExtendedMapOptionsProps extends MapOptions, ComponentProps {
   bounds?: LatLngBoundsExpression;
   style?: Partial<CSSStyleDeclaration>;
+  children?: ComponentChildren;
 }
 
 // Create layer types:
 export type LayerType = Marker | TileLayer | Polyline;
 
-export type LayerTypeConstructable = LayerType & {
-  new (firstArgProp: string, options: { componentName?: string }): LayerType;
-};
+export type LayerTypeConstructable = LayerType & 
+  { new (firstProp: string, options: { componentName?: string }): LayerType; };
 
-export interface LayerProps extends TileLayerOptions, PolylineOptions, MarkerOptions {
+export interface LayerProps extends TileLayerOptions, PolylineOptions, MarkerOptions, ComponentProps {
   url?: string;
   position?: number[];
   positions?: number[][];
@@ -36,7 +45,7 @@ export interface LayerProps extends TileLayerOptions, PolylineOptions, MarkerOpt
 
 // Zoom control types
 
-export interface ZoomControlProps {
+export interface ZoomControlProps extends ComponentProps {
   readonly leafletMap?: Map;
   position?: ControlPosition;
   options?: ZoomOptions;
@@ -44,8 +53,9 @@ export interface ZoomControlProps {
 
 // MarkerCluster Control props
 
-export interface MarkerClusterProps {
+export interface MarkerClusterProps extends ComponentProps {
   readonly leafletMap?: Map;
   position: ControlPosition;
   options?: ZoomOptions;
+  children?: ComponentChildren;
 }
