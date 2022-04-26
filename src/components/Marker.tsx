@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import { useEffect } from 'preact/hooks';
+import { useEffect, useRef } from 'preact/hooks';
 import * as Leaflet from 'leaflet';
 
 import { useMapContext } from '../hooks/useMapContext';
@@ -13,10 +13,18 @@ interface MarkerProps {
 
 export const Marker = ({ position, icon, options = {} }: MarkerProps) => {
 
+  const marker = useRef<Leaflet.Marker | null>(null);
+
   const { map } = useMapContext();
 
   useEffect(() => {
-    if (map) Leaflet.marker(position, { ...options, icon }).addTo(map);
+    if (map) {
+      marker.current = Leaflet.marker(position, { ...options, icon }).addTo(map);
+    }
+
+    return () => {
+      if (map && marker.current) marker.current.removeFrom(map);
+    }
   }, [map, position]);
 
   return null;

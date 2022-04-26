@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import { useEffect } from 'preact/hooks';
+import { useEffect, useRef } from 'preact/hooks';
 import * as Leaflet from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
@@ -17,10 +17,17 @@ interface MapProps {
 
 export const Map = ({ containerId, setMap, options }: MapProps) => {
 
+  const map = useRef<Leaflet.Map | null>(null);
+
   const  { center, zoom } = options;
 
   useEffect(() => {
-    setMap(Leaflet.map(containerId, options).setView(center, zoom));
+    map.current = Leaflet.map(containerId, options).setView(center, zoom);
+    setMap(map.current);
+
+    return () => {
+      if (map && map.current) map.current.remove();
+    }
   }, []);
   
   return null;

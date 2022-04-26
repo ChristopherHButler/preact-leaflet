@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import { useEffect } from 'preact/hooks';
+import { useEffect, useRef } from 'preact/hooks';
 import * as Leaflet from 'leaflet';
 
 import { useMapContext } from '../hooks/useMapContext';
@@ -12,10 +12,18 @@ interface TileLayerProps {
 
 export const TileLayer = ({ url, options = {} }: TileLayerProps) => {
 
+  const tileLayer = useRef<Leaflet.TileLayer | null>(null);
+
   const { map } = useMapContext();
 
   useEffect(() => {
-    if (map) Leaflet.tileLayer(url, { ...options } ).addTo(map);
+    if (map) {
+      tileLayer.current = Leaflet.tileLayer(url, { ...options } ).addTo(map);
+    }
+
+    return () => {
+      if (map && tileLayer.current) tileLayer.current.removeFrom(map);
+    }
   }, [map, url, options]);
 
   return null;
