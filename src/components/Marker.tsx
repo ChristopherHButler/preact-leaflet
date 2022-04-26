@@ -8,10 +8,10 @@ import { useMapContext } from '../hooks/useMapContext';
 interface MarkerProps {
   position: Leaflet.LatLngExpression;
   icon?: Leaflet.Icon | Leaflet.DivIcon | undefined;
-  options: Leaflet.MarkerOptions | undefined;
+  options?: Leaflet.MarkerOptions | undefined;
 }
 
-export const Marker = ({ position, icon, options }: MarkerProps) => {
+export const Marker = ({ position, icon, options = {} }: MarkerProps) => {
 
   const { map } = useMapContext();
 
