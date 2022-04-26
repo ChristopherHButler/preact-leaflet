@@ -149,11 +149,16 @@ export default class App extends Component {
               zoomOffset: -1,
               // required for mapbox
               accessToken: '',
+              // crossOrigin: false,
             }}
           />
           <Marker
             position={[51.5, -0.09]}
             icon={SvgIcon}
+            options={{
+              title: 'this is my title',
+              opacity: 0.5,
+            }}
           />
         </MapContainer>
       </Fragment>

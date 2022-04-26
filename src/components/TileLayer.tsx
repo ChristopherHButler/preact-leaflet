@@ -7,7 +7,7 @@ import { useMapContext } from '../hooks/useMapContext';
 
 interface TileLayerProps {
   url: string;
-  options: Leaflet.TileLayerOptions | undefined
+  options?: Leaflet.TileLayerOptions | undefined;
 }
 
 export const TileLayer = ({ url, options = {} }: TileLayerProps) => {
