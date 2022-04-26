@@ -56,11 +56,3 @@ ul.menu li.active {
 ul.menu li a {
   display: block;
 }
-
-.leaflet-container {
-  height: 85vh !important;
-}
-
-.leaflet-div-icon {
-  border-radius: 50%;
-}
