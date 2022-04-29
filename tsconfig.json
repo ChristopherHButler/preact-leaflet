@@ -25,7 +25,7 @@
       "declaration": true, // This tells TypeScript to emit an .d.ts definitions file along with your compiled JavaScript, which is what TypeScript will use for type checking.
       "outDir": "./dist", // The javascript will be compiled to the dist folder.
       // "experimentalDecorators": true,
-      "jsxImportSource": "preact",
+      // "jsxImportSource": "preact",
       "strictPropertyInitialization": false
 
   },
