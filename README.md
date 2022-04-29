@@ -2,10 +2,10 @@
 
 🚧 This library is current under construction. 🚧
 
-Supporting following Leaflet components:
-* [MapContainer](https://leafletjs.com/reference-1.4.0.html#map-example)
-* [Marker](https://leafletjs.com/reference-1.4.0.html#marker)
-* [TileLayer](https://leafletjs.com/reference-1.4.0.html#tilelayer)
+Currently Supporting the following Leaflet components:
+* [MapContainer](https://leafletjs.com/reference.html#map-example)
+* [Marker](https://leafletjs.com/reference.html#marker)
+* [TileLayer](https://leafletjs.com/reference.html#tilelayer)
 
 ## Example
 
@@ -118,7 +118,9 @@ export const App = () => {
 ```
 
 ## API
-This is just a thin wrapper, checkout [Leaflet API](https://leafletjs.com/reference.html) for usage.
+
+This project is a thin wrapper around the native [leafletjs](https://leafletjs.com/reference.html) library.
+
 
 ### Options
 
@@ -131,6 +133,7 @@ This is just a thin wrapper, checkout [Leaflet API](https://leafletjs.com/refere
  - [ ] Support for all Map events
  - [ ] Support for all Marker events
  - [ ] Support for all Tile Layer events
+
 ### TODO:
 
  - [ ] Add ability to get a ref to Markers and TileLayer

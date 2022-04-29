@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+
+ - [x] Support for all Map options
+ - [x] Support for all Marker options
+ - [x] Support for all Tile Layer options
+ - [x] Cleanup Map, Marker and TileLayer (with return from useEffect) 
+
+
+
+
+
+
+
+
+
 ### 0.1.0 (2019-12-10)
 
 Note: Changes made to verion 0.1.0 and prior were from a different author: [kontrollanten/preact-leaflet](https://github.com/kontrollanten/preact-leaflet). This repo has been forked and modified.
