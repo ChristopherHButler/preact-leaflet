@@ -118,7 +118,9 @@ export const App = () => {
 ```
 
 ## API
-This is just a thin wrapper, checkout [Leaflet API](https://leafletjs.com/reference.html) for usage.
+
+This project is a thin wrapper around the native [leafletjs](https://leafletjs.com/reference.html) library.
+
 
 ### Options
 

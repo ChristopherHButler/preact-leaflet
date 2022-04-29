@@ -30,5 +30,5 @@ export const Map = ({ containerId, setMap, options }: MapProps) => {
     }
   }, []);
   
-  return null;
+  return <div />;
 };
