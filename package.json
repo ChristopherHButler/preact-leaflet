@@ -2,7 +2,7 @@
   "name": "preact-leaflet",
   "description": "A preact wrapper for the leaflet JavaScript library",
   "author": "Christopher Butler",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "source": "src/index.tsx",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -33,7 +33,9 @@
     "test:ci": "NODE_ENV=test karma start"
   },
   "dependencies": {
-    "@types/leaflet": "^1.7.9",
+    "@types/leaflet": "^1.7.9"
+  },
+  "peerDependencies": {
     "leaflet": "^1.8.0",
     "preact": "^10.3.2"
   },
