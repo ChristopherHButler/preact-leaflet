@@ -33,9 +33,7 @@
     "test:ci": "NODE_ENV=test karma start"
   },
   "dependencies": {
-    "@types/leaflet": "^1.7.9"
-  },
-  "peerDependencies": {
+    "@types/leaflet": "^1.7.9",
     "leaflet": "^1.8.0",
     "preact": "^10.3.2"
   },
