@@ -148,7 +148,7 @@ export default class App extends Component {
               tileSize: 512,
               zoomOffset: -1,
               // required for mapbox
-              accessToken: 'pk.eyJ1IjoiY2J1dGxlcjAwIiwiYSI6ImNsMWZodHd2NjAwMDIzZXF1N3I0Zzc4MTcifQ.fi4CpKahbRAP3VlmVC0Q-A',
+              accessToken: '',
               // crossOrigin: false,
             }}
           />
