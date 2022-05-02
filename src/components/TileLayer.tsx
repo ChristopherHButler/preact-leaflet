@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import { useEffect, useRef } from 'preact/compat';
+import { useEffect, useRef } from 'preact/hooks';
 import * as Leaflet from 'leaflet';
 
 import { Prop } from '../types';
