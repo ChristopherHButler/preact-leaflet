@@ -2,7 +2,7 @@
   "name": "preact-leaflet",
   "description": "A preact wrapper for the leaflet JavaScript library",
   "author": "Christopher Butler",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "source": "src/index.tsx",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -25,10 +25,10 @@
   ],
   "scripts": {
     "clean": "rm -rf .parcel-cache dist dist-demo",
-    "demo:start": "npm run build && parcel demo/index.html --dist-dir dist-demo",
+    "demo:start": "npm run clean && npm run build && parcel demo/index.html --dist-dir dist-demo",
     "watch": "parcel watch",
-    "build": "npm run clean && parcel build --no-source-maps",
-    "lint": "eslint src demo",
+    "build": "parcel build --no-source-maps",
+    "lint": "eslint .",
     "release": "standard-version"
   },
   "dependencies": {
