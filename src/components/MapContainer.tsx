@@ -1,5 +1,5 @@
 import { h, RefObject, ComponentChildren } from 'preact';
-import { useState } from 'preact/hooks';
+import { useState } from 'preact/compat';
 import * as Leaflet from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
