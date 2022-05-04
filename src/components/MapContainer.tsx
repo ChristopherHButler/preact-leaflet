@@ -26,7 +26,7 @@ export const MapContainer = ({
   options = {},
   height = '400px',
   style = {},
-}: MapContainerProps): h.JSX.Element => {
+}: MapContainerProps) => {
 
   const [map, setMap] = useState<Leaflet.Map | null>(null);
   
