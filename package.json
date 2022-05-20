@@ -2,7 +2,7 @@
   "name": "preact-leaflet",
   "description": "A preact wrapper for the leaflet JavaScript library",
   "author": "Christopher Butler",
-  "version": "0.1.19",
+  "version": "0.1.20",
   "source": "src/index.tsx",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -30,6 +30,10 @@
     "build": "parcel build --no-source-maps",
     "lint": "eslint .",
     "release": "standard-version"
+  },
+  "peerDependencies": {
+    "leaflet": "^1.8.0",
+    "preact": "^10.7.2"
   },
   "devDependencies": {
     "@babel/core": "7.12.16",
