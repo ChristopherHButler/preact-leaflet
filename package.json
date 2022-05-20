@@ -2,7 +2,7 @@
   "name": "preact-leaflet",
   "description": "A preact wrapper for the leaflet JavaScript library",
   "author": "Christopher Butler",
-  "version": "0.1.18",
+  "version": "0.1.19",
   "source": "src/index.tsx",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -31,11 +31,6 @@
     "lint": "eslint .",
     "release": "standard-version"
   },
-  "dependencies": {
-    "@types/leaflet": "^1.7.9",
-    "leaflet": "^1.8.0",
-    "preact": "^10.3.2"
-  },
   "devDependencies": {
     "@babel/core": "7.12.16",
     "@babel/plugin-transform-react-jsx": "7.12.16",
@@ -45,6 +40,7 @@
     "@parcel/packager-ts": "^2.0.0-rc.0",
     "@parcel/transformer-image": "^2.0.0-rc.0",
     "@parcel/transformer-typescript-types": "^2.0.0-rc.0",
+    "@types/leaflet": "^1.7.10",
     "babel-plugin-istanbul": "6.0.0",
     "babelify": "10.0.0",
     "browserify": "17.0.0",
@@ -53,7 +49,9 @@
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-jsx-a11y": "6.4.1",
     "eslint-plugin-react": "7.22.0",
+    "leaflet": "^1.8.0",
     "parcel": "^2.0.0-rc.0",
+    "preact": "^10.7.2",
     "standard-version": "9.1.0",
     "typescript": "^4.6.3",
     "watchify": "3.11.1"
