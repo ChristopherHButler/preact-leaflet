@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 import L from 'leaflet';
 
 export const SvgIcon = L.divIcon({
@@ -12,7 +13,7 @@ export const SvgIcon = L.divIcon({
     >
       <path d="M0 0 L50 100 L100 0 Z" fill="#7A8BE7"></path>
     </svg>`,
-  className: "",
+  className: '',
   iconSize: [24, 40],
   iconAnchor: [12, 40],
 });
